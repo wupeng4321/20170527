@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input 类型</title>
+</head>
+<body>
+    <form action="">
+        <input type="url" name="url" value="www.baidu.com">
+        <input type="submit" value="提交">
+    </form>
+
+    <form action="">
+        <input type="email" name="email" value="wupeng_4321@163.com">
+        <input type="submit" value="提交">
+    </form>
+
+    <form action="">
+        <input type="date" name="date" value="">
+        <input type="submit" value="提交">
+    </form>
+
+    <input type="time" name="time" value="10:00">
+
+    <input type="datetime" name="datetime" value="">
+
+    <input type="datetime-local" name="datetime-local" value="">
+
+    <!--month-->
+    <input name="month" type="month" value="">
+    <!--week-->
+    <input type="week" name="week">
+    <!--number-->
+    <input type="number" name="number" value="15" min="10" max="50" step="2">
+    <br>
+
+    <script>
+        function add() {
+            var num1 = document.getElementById("num1").valueAsNumber;
+            var num2 = document.getElementById("num2").valueAsNumber;
+            document.getElementById("result").valueAsNumber = num1 + num2;
+
+        }
+    </script>
+
+    <form action="">
+        <input type="number" id="num1">+
+        <input type="number" id="num2">=
+        <input type="number" id="result">
+        <input type="button" value="计算" onclick="add()">
+    </form>
+
+
+    <!--range-->
+    <input type="range" name="range" value="25" min="0" max="100" step="2">
+    <!--search-->
+    <input type="search">
+
+    <!--tel-->
+    <input type="tel">
+
+    <!--color-->
+    <input type="color" onchange="document.body.style.backgroundColor = document.getElementById('currentColor').textContent = this.value">
+    <span id="currentColor"></span>
+
+    <!--output 元素追加-->
+    <script>
+        function value_change() {
+            var number = document.getElementById("range").value;
+            document.getElementById("output").value = number;
+        }
+    </script>
+    <form action="" id="testform">
+        <input type="range" id="range" value="10" min="0" max="100" step="2" onchange="value_change()">
+        <output id="output">
+            10
+        </output>
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--figure元素以及figcaption-->
+    <figure>
+        <img src="../1.png" alt="标尺">
+        <!--一个整体的描述,只能有一个-->
+        <figcaption>标尺</figcaption>
+    </figure>
+
+    <!--detail元素和summary元素-->
+    <script>
+        function detail_onclick(detail) {
+            var p = document.getElementById("p");
+            if (detail.open()) {
+                p.style.visibility = "hidden";
+            } else {
+                p.style.visibility = "visible";
+            }
+
+        }
+    </script>
+    <details id="detail" onclick="detail_onclick(this)">
+        <summary>速度与激情7</summary>
+        <p id="p" style="visibility: visible">你好吗,这是专门为保罗做的</p>
+    </details>
+
+    <!--mark元素-->
+    <p>这是一段文字用来测试<mark>Mark</mark>元素</p>
+</body>
+</html>
